@@ -1,0 +1,8 @@
+{
+   "name": "data",
+   "description": "simple data storage",
+   "author": {
+      "name": "Adam Kircher"
+   },
+   "main": "factory/data.js"
+}

@@ -1,0 +1,23 @@
+<div ng-controller="login" class="col-sm-offset-2 col-sm-10">
+	<h1>welcome to ng.crud!</h1>
+	<h5>ng.crud is an example module to demonstrate ng.seed's basic concepts</h5>
+	<h5 style="color:gray">{{welcome}}</h5>
+	<alerts></alerts>
+	<form name="form" class="form-horizontal" role="form">
+		<div class="form-group col-sm-6" label="Email" error="Must be a valid email">
+			<input name="email" type="email" class="form-control" ng-model="user.email" required>
+		</div>
+		<div class="form-group col-sm-6" label="Password" error="Must be at least 8 characters" >
+			<input name="password" type="password" class="form-control" ng-model="user.password" required ng-minlength="8">
+		</div>
+		<div class="form-group col-sm-6" label="Confirm" error="Must be at least 6 characters">
+			<input name="confirm" type="password" class="form-control" ng-model="user.confirm" required ng-minlength="6">
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-4">
+				<button type="submit" class="btn btn-primary" ng-click="signIn(user)">Sign in</button>
+				<a href="login/join"  class="btn btn-default" ng-if="! user.email">Sign Up</a>
+			</div>
+		</div>
+	</form>
+</div>
